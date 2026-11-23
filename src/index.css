@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&family=Syne:wght@600;700;800&display=swap');
+@import 'tailwindcss';
+
+/*
+  Portfolio visual system — inspired by principles in docs/DESIGN.md
+  (warm paper, flat surfaces, tight display type, chromatic accent as rhythm)
+  but original for this site — not a Glyphy clone.
+*/
+
+@theme {
+  --color-paper: #f3eee4;
+  --color-ink: #161310;
+  --color-night: #12100e;
+  --color-mist: #a39b8f;
+  --color-rule: #d4cdc0;
+  --color-heat: #e4572e;
+  --color-flare: #f0a202;
+  --color-ember: #9b2d4a;
+
+  --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --text-caption: 0.75rem;
+  --text-body-sm: 0.875rem;
+  --text-body: 1.0625rem;
+  --text-subheading: 1.25rem;
+  --text-heading-sm: 1.5rem;
+  --text-heading: 2rem;
+  --text-heading-lg: 2.75rem;
+  --text-display: 4.5rem;
+  --text-hero: 6.5rem;
+
+  --radius-card: 12px;
+  --radius-pill: 999px;
+
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-80: 80px;
+}
+
+:root {
+  --surface-canvas: var(--color-paper);
+  --surface-card: #faf7f0;
+  --surface-dark-card: var(--color-night);
+  --surface-nav: color-mix(in srgb, var(--color-paper) 88%, transparent);
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-mist);
+  --text-on-dark: var(--color-paper);
+  --border-hairline: var(--color-rule);
+  --border-strong: var(--color-ink);
+  --btn-filled-bg: var(--color-ink);
+  --btn-filled-fg: var(--color-paper);
+  --btn-ghost-border: var(--color-ink);
+  --btn-ghost-fg: var(--color-ink);
+  --accent: var(--color-heat);
+  --focus-ring: var(--color-heat);
+}
+
+html.dark {
+  --surface-canvas: var(--color-night);
+  --surface-card: #1c1916;
+  --surface-dark-card: #0a0908;
+  --surface-nav: color-mix(in srgb, var(--color-night) 88%, transparent);
+  --text-primary: var(--color-paper);
+  --text-secondary: #8f877c;
+  --text-on-dark: var(--color-paper);
+  --border-hairline: #3a342c;
+  --border-strong: var(--color-paper);
+  --btn-filled-bg: var(--color-paper);
+  --btn-filled-fg: var(--color-ink);
+  --btn-ghost-border: var(--color-paper);
+  --btn-ghost-fg: var(--color-paper);
+  --accent: #ff6b40;
+  --focus-ring: #ff6b40;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--surface-canvas);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@layer utilities {
+  .heat-strip {
+    background: linear-gradient(
+      90deg,
+      var(--color-flare) 0%,
+      var(--color-heat) 45%,
+      var(--color-ember) 100%
+    );
+  }
+}
