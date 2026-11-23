@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none">
+  <rect width="960" height="600" fill="#12100e"/>
+  <rect y="560" width="960" height="40" fill="#9b2d4a"/>
+  <text x="48" y="100" font-family="monospace" font-size="16" fill="#a39b8f">WEB</text>
+  <text x="48" y="280" font-family="Arial Black, sans-serif" font-size="64" fill="#f3eee4">LEGACY UI</text>
+  <text x="48" y="340" font-family="Arial, sans-serif" font-size="26" fill="#a39b8f">React · TypeScript · Oracle</text>
+</svg>

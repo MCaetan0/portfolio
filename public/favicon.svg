@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" fill="#f3eee4"/>
+  <rect y="48" width="64" height="6" fill="#f0a202"/>
+  <rect y="54" width="64" height="5" fill="#e4572e"/>
+  <rect y="59" width="64" height="5" fill="#9b2d4a"/>
+  <text x="10" y="38" font-family="Arial Black, sans-serif" font-size="28" fill="#161310">M</text>
+</svg>

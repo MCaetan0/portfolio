@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" fill="none">
+  <rect width="960" height="600" fill="#faf7f0"/>
+  <rect x="40" y="40" width="880" height="520" rx="12" stroke="#161310" stroke-width="2" fill="none"/>
+  <rect y="560" width="960" height="40" fill="#f0a202"/>
+  <text x="72" y="130" font-family="monospace" font-size="16" fill="#a39b8f">BACKEND/API</text>
+  <text x="72" y="300" font-family="Arial Black, sans-serif" font-size="72" fill="#161310">API HUB</text>
+  <text x="72" y="360" font-family="Arial, sans-serif" font-size="26" fill="#a39b8f">.NET · Python · Docker · CI/CD</text>
+</svg>
