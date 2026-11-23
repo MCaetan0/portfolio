@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Marcelo Caetano de Lima — Desenvolvedor Full-Stack",
+    "description": "Portfólio de Marcelo Caetano de Lima, engenheiro de software full-stack. Projetos, experiência e contato."
+  },
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato",
+    "menu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "themeToLight": "Ativar modo claro",
+    "themeToDark": "Ativar modo escuro",
+    "language": "Idioma"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer",
+    "tagline": "APIs, automações e produtos full-stack — do design à produção.",
+    "ctaProjects": "Ver projetos",
+    "ctaResume": "Baixar currículo"
+  },
+  "about": {
+    "eyebrow": "01 — Sobre",
+    "title": "Trajetória e formação",
+    "education": "Formação",
+    "languages": "Idiomas"
+  },
+  "experience": {
+    "eyebrow": "02 — Experiência",
+    "title": "Onde construí"
+  },
+  "projects": {
+    "eyebrow": "03 — Projetos",
+    "title": "Trabalho selecionado",
+    "all": "Todos",
+    "filterCategory": "Categoria",
+    "filterTech": "Tecnologia",
+    "view": "Abrir →",
+    "featured": "Destaque",
+    "empty": "Nenhum projeto encontrado com esses filtros.",
+    "back": "← Voltar",
+    "stack": "Stack",
+    "links": "Links",
+    "repo": "Repositório",
+    "demo": "Demo",
+    "video": "Vídeo",
+    "gallery": "Galeria",
+    "year": "Ano"
+  },
+  "skills": {
+    "eyebrow": "04 — Stack",
+    "title": "Ferramentas e fundamentos"
+  },
+  "contact": {
+    "eyebrow": "05 — Contato",
+    "title": "Vamos conversar",
+    "copy": "Copiar e-mail",
+    "copied": "Copiado!",
+    "email": "E-mail",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "madeWith": "Feito com React",
+    "rights": "Todos os direitos reservados."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Página não encontrada",
+    "body": "O caminho que você pediu não existe.",
+    "cta": "Voltar ao início"
+  },
+  "focus": {
+    "fullstack": {
+      "headline": "Desenvolvedor Full-Stack",
+      "summary": "Engenheiro de software, bacharel em Ciência da Computação, com experiência em todo o ciclo de vida do software: design, desenvolvimento, deploy e operação em produção. Construo APIs RESTful escaláveis, automações backend e serviços distribuídos com mensageria, pipelines de CI/CD e infraestrutura em nuvem (GCP). Trabalho com Python, C# (.NET), TypeScript, React e SQL, com boa base em estruturas de dados, algoritmos e resolução de problemas."
+    },
+    "dotnet": {
+      "headline": "Desenvolvedor backend .NET | APIs e integrações",
+      "summary": "Desenvolvedor backend com foco em C# (.NET), APIs RESTful versionadas e integrações seguras. Experiência em SQL Server/PostgreSQL, containerização com Docker, CI/CD e operação em produção. Entrego serviços bem documentados, testáveis e prontos para escala."
+    },
+    "python": {
+      "headline": "Desenvolvedor Python | Automações e dados",
+      "summary": "Desenvolvedor com forte atuação em Python para automações, integrações e pipelines de dados. Trabalho com BigQuery, SQL e APIs, do prototipo à operação em produção, priorizando código claro, observabilidade e entrega contínua."
+    },
+    "react": {
+      "headline": "Desenvolvedor Front-end | React e TypeScript",
+      "summary": "Desenvolvedor front-end com React e TypeScript, incluindo React Native. Construo interfaces dinâmicas, responsivas e orientadas a produto — do Figma ao código — com atenção a acessibilidade, performance e integração com APIs."
+    },
+    "backend": {
+      "headline": "Desenvolvedor Backend | APIs e sistemas distribuídos",
+      "summary": "Desenvolvedor backend focado em APIs, microsserviços, mensageria e infraestrutura. Experiência com Docker, GCP, CI/CD e bancos relacionais/analíticos. Desenho e opero serviços confiáveis do contrato da API ao deploy."
+    }
+  }
+}

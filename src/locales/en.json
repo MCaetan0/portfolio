@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Marcelo Caetano de Lima — Full-Stack Software Engineer",
+    "description": "Portfolio of Marcelo Caetano de Lima, full-stack software engineer. Projects, experience, and contact."
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "closeMenu": "Close menu",
+    "themeToLight": "Switch to light mode",
+    "themeToDark": "Switch to dark mode",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Software Engineer",
+    "tagline": "APIs, automations, and full-stack products — from design to production.",
+    "ctaProjects": "View projects",
+    "ctaResume": "Download resume"
+  },
+  "about": {
+    "eyebrow": "01 — About",
+    "title": "Background and education",
+    "education": "Education",
+    "languages": "Languages"
+  },
+  "experience": {
+    "eyebrow": "02 — Experience",
+    "title": "Where I’ve built"
+  },
+  "projects": {
+    "eyebrow": "03 — Projects",
+    "title": "Selected work",
+    "all": "All",
+    "filterCategory": "Category",
+    "filterTech": "Technology",
+    "view": "Open →",
+    "featured": "Featured",
+    "empty": "No projects match these filters.",
+    "back": "← Back",
+    "stack": "Stack",
+    "links": "Links",
+    "repo": "Repository",
+    "demo": "Demo",
+    "video": "Video",
+    "gallery": "Gallery",
+    "year": "Year"
+  },
+  "skills": {
+    "eyebrow": "04 — Stack",
+    "title": "Tools and foundations"
+  },
+  "contact": {
+    "eyebrow": "05 — Contact",
+    "title": "Let’s talk",
+    "copy": "Copy email",
+    "copied": "Copied!",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "madeWith": "Built with React",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "Page not found",
+    "body": "The path you requested does not exist.",
+    "cta": "Back to home"
+  },
+  "focus": {
+    "fullstack": {
+      "headline": "Software Engineer | Full-Stack",
+      "summary": "Software engineer with a B.Sc. in Computer Science and experience across the full software lifecycle: design, development, deploy, and production operations. I build scalable RESTful APIs, backend automations, and distributed services with messaging, CI/CD pipelines, and cloud infrastructure (GCP). I work with Python, C# (.NET), TypeScript, React, and SQL, with a solid foundation in data structures, algorithms, and problem solving."
+    },
+    "dotnet": {
+      "headline": ".NET Backend Developer | APIs & integrations",
+      "summary": "Backend developer focused on C# (.NET), versioned RESTful APIs, and secure integrations. Experience with SQL Server/PostgreSQL, Docker, CI/CD, and production operations. I deliver well-documented, testable services ready to scale."
+    },
+    "python": {
+      "headline": "Python Developer | Automation & data",
+      "summary": "Developer with strong Python experience for automation, integrations, and data pipelines. I work with BigQuery, SQL, and APIs — from prototype to production — prioritizing clear code, observability, and continuous delivery."
+    },
+    "react": {
+      "headline": "Front-end Developer | React & TypeScript",
+      "summary": "Front-end developer with React and TypeScript, including React Native. I build dynamic, responsive, product-oriented interfaces — from Figma to code — with attention to accessibility, performance, and API integration."
+    },
+    "backend": {
+      "headline": "Backend Developer | APIs & distributed systems",
+      "summary": "Backend developer focused on APIs, microservices, messaging, and infrastructure. Experience with Docker, GCP, CI/CD, and relational/analytical databases. I design and operate reliable services from API contract to deploy."
+    }
+  }
+}
