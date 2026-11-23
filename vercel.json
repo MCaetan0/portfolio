@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    { "source": "/go/x1", "destination": "/?ref=k7", "permanent": false },
+    { "source": "/go/r2", "destination": "/?ref=a3", "permanent": false },
+    { "source": "/go/p1", "destination": "/?ref=p2", "permanent": false },
+    { "source": "/go/b1", "destination": "/?ref=b9", "permanent": false }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
