@@ -14,6 +14,7 @@ dist-ssr
 .env
 .env.*
 .private/
+docs/curriculos/
 
 # Editor directories and files
 .vscode/*
