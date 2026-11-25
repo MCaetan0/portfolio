@@ -2,8 +2,8 @@ import type { ExperienceItem } from '../types'
 
 export const experience: ExperienceItem[] = [
   {
-    id: 'use-uniformes',
-    company: 'USE UNIFORMES',
+    id: 'focus-comercio',
+    company: 'Focus Comércio de Produtos Sustentáveis',
     role: {
       pt: 'Analista de Desenvolvimento',
       en: 'Software Developer Analyst',
