@@ -6,7 +6,7 @@ import { useScrollSpy } from '../../hooks/useScrollSpy'
 import { LanguageToggle } from '../ui/LanguageToggle'
 import { ThemeToggle } from '../ui/ThemeToggle'
 
-const NAV_IDS = ['about', 'experience', 'projects', 'skills', 'contact'] as const
+const NAV_IDS = ['projects', 'how', 'experience', 'contact'] as const
 const NAV_IDS_LIST: string[] = [...NAV_IDS]
 
 export function Header() {
