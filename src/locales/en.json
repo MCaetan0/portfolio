@@ -1,13 +1,12 @@
 {
   "meta": {
-    "title": "Marcelo Caetano de Lima — Full-Stack Software Engineer",
-    "description": "Portfolio of Marcelo Caetano de Lima, full-stack software engineer. Projects, experience, and contact."
+    "title": "Marcelo Caetano de Lima — Backend Software Engineer · .NET & Python",
+    "description": "Portfolio of Marcelo Caetano de Lima, backend software engineer with .NET and Python. APIs, integrations, and production services."
   },
   "nav": {
-    "about": "About",
-    "experience": "Experience",
     "projects": "Projects",
-    "skills": "Skills",
+    "how": "How I work",
+    "experience": "Experience",
     "contact": "Contact",
     "menu": "Open menu",
     "closeMenu": "Close menu",
@@ -16,23 +15,25 @@
     "language": "Language"
   },
   "hero": {
-    "eyebrow": "Software Engineer",
-    "tagline": "APIs, automations, and full-stack products — from design to production.",
+    "eyebrow": "Backend Software Engineer · .NET & Python",
+    "tagline": "I build and run APIs, integrations, and distributed services in production.",
     "ctaProjects": "View projects",
-    "ctaResume": "Download resume"
+    "ctaResume": "Resume (PDF)",
+    "coreStack": "Core stack"
   },
-  "about": {
-    "eyebrow": "01 — About",
-    "title": "Background and education",
-    "education": "Education",
-    "languages": "Languages"
+  "how": {
+    "eyebrow": "02 — How I work",
+    "title": "How I work"
   },
   "experience": {
-    "eyebrow": "02 — Experience",
-    "title": "Where I’ve built"
+    "eyebrow": "03 — Experience",
+    "title": "Experience",
+    "resumeLink": "Full resume (PDF)",
+    "showDetails": "See details",
+    "hideDetails": "Hide details"
   },
   "projects": {
-    "eyebrow": "03 — Projects",
+    "eyebrow": "01 — Projects",
     "title": "Selected work",
     "all": "All",
     "filterCategory": "Category",
@@ -49,18 +50,16 @@
     "gallery": "Gallery",
     "year": "Year"
   },
-  "skills": {
-    "eyebrow": "04 — Stack",
-    "title": "Tools and foundations"
-  },
   "contact": {
-    "eyebrow": "05 — Contact",
+    "eyebrow": "04 — Contact",
     "title": "Let’s talk",
     "copy": "Copy email",
     "copied": "Copied!",
     "email": "Email",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "education": "Education",
+    "languages": "Languages"
   },
   "footer": {
     "madeWith": "Built with React",
@@ -74,12 +73,12 @@
   },
   "focus": {
     "fullstack": {
-      "headline": "Software Engineer | Full-Stack",
-      "summary": "Software engineer with a B.Sc. in Computer Science and experience across the full software lifecycle: design, development, deploy, and production operations. I build scalable RESTful APIs, backend automations, and distributed services with messaging, CI/CD pipelines, and cloud infrastructure (GCP). I work with Python, C# (.NET), TypeScript, React, and SQL, with a solid foundation in data structures, algorithms, and problem solving."
+      "headline": "Backend Software Engineer · .NET & Python",
+      "summary": "Backend software engineer working with .NET and Python. I build APIs, integrations, and internal systems that replace paid tools — and take them all the way to production."
     },
     "dotnet": {
       "headline": ".NET Backend Developer | APIs & integrations",
-      "summary": "Backend developer focused on C# (.NET), versioned RESTful APIs, and secure integrations. Experience with SQL Server/PostgreSQL, Docker, CI/CD, and production operations. I deliver well-documented, testable services ready to scale."
+      "summary": "I build APIs and integrations in C# with ASP.NET Core (Web API and Minimal APIs) and EF Core, documented with Swagger and following SOLID. I own the full cycle: contract design, automated tests, Docker, and automated deploys with GitHub Actions."
     },
     "python": {
       "headline": "Python Developer | Automation & data",
@@ -91,7 +90,7 @@
     },
     "backend": {
       "headline": "Backend Developer | APIs & distributed systems",
-      "summary": "Backend developer focused on APIs, microservices, messaging, and infrastructure. Experience with Docker, GCP, CI/CD, and relational/analytical databases. I design and operate reliable services from API contract to deploy."
+      "summary": "Backend developer focused on APIs, integrations, and messaging-based services (RabbitMQ). I work with .NET and Python, PostgreSQL and BigQuery, Docker, and GCP — and I care about cost and performance as much as features."
     }
   }
 }

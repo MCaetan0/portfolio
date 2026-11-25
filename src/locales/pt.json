@@ -1,13 +1,12 @@
 {
   "meta": {
-    "title": "Marcelo Caetano de Lima — Desenvolvedor Full-Stack",
-    "description": "Portfólio de Marcelo Caetano de Lima, engenheiro de software full-stack. Projetos, experiência e contato."
+    "title": "Marcelo Caetano de Lima — Engenheiro de Software Backend · .NET & Python",
+    "description": "Portfólio de Marcelo Caetano de Lima, engenheiro de software backend com .NET e Python. APIs, integrações e serviços em produção."
   },
   "nav": {
-    "about": "Sobre",
-    "experience": "Experiência",
     "projects": "Projetos",
-    "skills": "Habilidades",
+    "how": "Como eu trabalho",
+    "experience": "Experiência",
     "contact": "Contato",
     "menu": "Abrir menu",
     "closeMenu": "Fechar menu",
@@ -16,23 +15,25 @@
     "language": "Idioma"
   },
   "hero": {
-    "eyebrow": "Software Engineer",
-    "tagline": "APIs, automações e produtos full-stack — do design à produção.",
+    "eyebrow": "Engenheiro de Software Backend · .NET & Python",
+    "tagline": "Construo e opero APIs, integrações e serviços distribuídos em produção.",
     "ctaProjects": "Ver projetos",
-    "ctaResume": "Baixar currículo"
+    "ctaResume": "Currículo (PDF)",
+    "coreStack": "Stack principal"
   },
-  "about": {
-    "eyebrow": "01 — Sobre",
-    "title": "Trajetória e formação",
-    "education": "Formação",
-    "languages": "Idiomas"
+  "how": {
+    "eyebrow": "02 — Como eu trabalho",
+    "title": "Como eu trabalho"
   },
   "experience": {
-    "eyebrow": "02 — Experiência",
-    "title": "Onde construí"
+    "eyebrow": "03 — Experiência",
+    "title": "Experiência",
+    "resumeLink": "Currículo completo (PDF)",
+    "showDetails": "Ver detalhes",
+    "hideDetails": "Ocultar detalhes"
   },
   "projects": {
-    "eyebrow": "03 — Projetos",
+    "eyebrow": "01 — Projetos",
     "title": "Trabalho selecionado",
     "all": "Todos",
     "filterCategory": "Categoria",
@@ -49,18 +50,16 @@
     "gallery": "Galeria",
     "year": "Ano"
   },
-  "skills": {
-    "eyebrow": "04 — Stack",
-    "title": "Ferramentas e fundamentos"
-  },
   "contact": {
-    "eyebrow": "05 — Contato",
+    "eyebrow": "04 — Contato",
     "title": "Vamos conversar",
     "copy": "Copiar e-mail",
     "copied": "Copiado!",
     "email": "E-mail",
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "education": "Formação",
+    "languages": "Idiomas"
   },
   "footer": {
     "madeWith": "Feito com React",
@@ -74,16 +73,16 @@
   },
   "focus": {
     "fullstack": {
-      "headline": "Desenvolvedor Full-Stack",
-      "summary": "Engenheiro de software, bacharel em Ciência da Computação, com experiência em todo o ciclo de vida do software: design, desenvolvimento, deploy e operação em produção. Construo APIs RESTful escaláveis, automações backend e serviços distribuídos com mensageria, pipelines de CI/CD e infraestrutura em nuvem (GCP). Trabalho com Python, C# (.NET), TypeScript, React e SQL, com boa base em estruturas de dados, algoritmos e resolução de problemas."
+      "headline": "Engenheiro de Software Backend · .NET & Python",
+      "summary": "Engenheiro de software backend com .NET e Python. Construo APIs, integrações e sistemas internos que substituem ferramentas pagas, e levo tudo até a produção."
     },
     "dotnet": {
       "headline": "Desenvolvedor backend .NET | APIs e integrações",
-      "summary": "Desenvolvedor backend com foco em C# (.NET), APIs RESTful versionadas e integrações seguras. Experiência em SQL Server/PostgreSQL, containerização com Docker, CI/CD e operação em produção. Entrego serviços bem documentados, testáveis e prontos para escala."
+      "summary": "Desenvolvo APIs e integrações em C# com ASP.NET Core (Web API e Minimal APIs) e EF Core, documentadas com Swagger e seguindo SOLID. Cuido do ciclo inteiro: desenho do contrato, testes automatizados, Docker e deploy automático com GitHub Actions."
     },
     "python": {
       "headline": "Desenvolvedor Python | Automações e dados",
-      "summary": "Desenvolvedor com forte atuação em Python para automações, integrações e pipelines de dados. Trabalho com BigQuery, SQL e APIs, do prototipo à operação em produção, priorizando código claro, observabilidade e entrega contínua."
+      "summary": "Desenvolvedor com forte atuação em Python para automações, integrações e pipelines de dados. Trabalho com BigQuery, SQL e APIs, do protótipo à operação em produção, priorizando código claro, observabilidade e entrega contínua."
     },
     "react": {
       "headline": "Desenvolvedor Front-end | React e TypeScript",
@@ -91,7 +90,7 @@
     },
     "backend": {
       "headline": "Desenvolvedor Backend | APIs e sistemas distribuídos",
-      "summary": "Desenvolvedor backend focado em APIs, microsserviços, mensageria e infraestrutura. Experiência com Docker, GCP, CI/CD e bancos relacionais/analíticos. Desenho e opero serviços confiáveis do contrato da API ao deploy."
+      "summary": "Desenvolvedor backend focado em APIs, integrações e serviços com mensageria (RabbitMQ). Trabalho com .NET e Python, PostgreSQL e BigQuery, Docker e GCP — e olho para custo e performance tanto quanto para funcionalidade."
     }
   }
 }

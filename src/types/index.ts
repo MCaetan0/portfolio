@@ -42,6 +42,7 @@ export type ExperienceItem = {
   role: LocaleText
   period: LocaleText
   tags: FocusTag[]
+  highlight?: LocaleText
   bullets: ExperienceBullet[]
 }
 
@@ -56,6 +57,18 @@ export type SkillGroup = {
   items: SkillItem[]
 }
 
+export type StackItem = {
+  label: string
+  tags: FocusTag[]
+}
+
+export type WorkPrinciple = {
+  id: string
+  title: LocaleText
+  body: LocaleText
+  tags: FocusTag[]
+}
+
 export type Profile = {
   name: string
   role: LocaleText
@@ -63,7 +76,7 @@ export type Profile = {
   email: string
   github: string
   linkedin: string
-  summary: LocaleText
+  avatar?: string
   education: {
     degree: LocaleText
     institution: string
