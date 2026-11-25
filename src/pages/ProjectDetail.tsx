@@ -18,7 +18,10 @@ export function ProjectDetail() {
 
   return (
     <article className="mx-auto max-w-4xl px-6 py-16 sm:px-10 sm:py-20">
-      <Link to="/#projects" className="font-mono text-body-sm text-[var(--text-secondary)] hover:underline">
+      <Link
+        to="/#projects"
+        className="font-mono text-body-sm text-[var(--text-secondary)] transition-opacity duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:underline"
+      >
         {t('projects.back')}
       </Link>
 

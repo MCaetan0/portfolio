@@ -1,10 +1,11 @@
 import { Link2, Mail, SquareCode } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useFocus } from '../../contexts/FocusContext'
 import { profile } from '../../data/profile'
 import { coreStack } from '../../data/stack'
+import { fadeSlideVariants, transition } from '../../lib/motion'
 import { sortByFocus } from '../../lib/sortByFocus'
 import { Badge } from '../ui/Badge'
 import { buttonLinkClass } from '../ui/buttonStyles'
@@ -17,14 +18,16 @@ export function Hero() {
   const lastName = profile.name.split(' ').slice(1).join(' ')
   const headline = t(`focus.${focus}.headline`)
   const stack = useMemo(() => sortByFocus(coreStack, focus), [focus])
+  const reduced = useReducedMotion() ?? false
 
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 pb-14 pt-16 sm:px-10 sm:pb-20 sm:pt-24">
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial="hidden"
+          animate="visible"
+          variants={fadeSlideVariants(reduced, 12)}
+          transition={transition('slow', reduced)}
         >
           <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
             <div className="min-w-0 flex-1">
@@ -89,7 +92,7 @@ export function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card)] border border-[var(--border-strong)]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card)] border border-[var(--border-strong)] transition-[background-color,transform] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:-translate-y-px hover:bg-[color-mix(in_srgb,var(--text-primary)_6%,transparent)]"
               >
                 <SquareCode size={18} aria-hidden />
               </a>
@@ -98,14 +101,14 @@ export function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card)] border border-[var(--border-strong)]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card)] border border-[var(--border-strong)] transition-[background-color,transform] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:-translate-y-px hover:bg-[color-mix(in_srgb,var(--text-primary)_6%,transparent)]"
               >
                 <Link2 size={18} aria-hidden />
               </a>
               <a
                 href={`mailto:${profile.email}`}
                 aria-label="Email"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card)] border border-[var(--border-strong)]"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-card)] border border-[var(--border-strong)] transition-[background-color,transform] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:-translate-y-px hover:bg-[color-mix(in_srgb,var(--text-primary)_6%,transparent)]"
               >
                 <Mail size={18} aria-hidden />
               </a>

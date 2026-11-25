@@ -14,7 +14,9 @@ export function LanguageToggle() {
       <button
         type="button"
         onClick={() => setAppLanguage('pt')}
-        className={`rounded px-1.5 py-1 ${isPt ? 'font-medium text-[var(--accent)]' : 'opacity-55 hover:opacity-100'}`}
+        className={`rounded px-1.5 py-1 transition-[opacity,color] duration-[var(--motion-fast)] ease-[var(--motion-ease)] ${
+          isPt ? 'font-medium text-[var(--accent)]' : 'opacity-55 hover:opacity-100'
+        }`}
         aria-pressed={isPt}
       >
         PT
@@ -25,7 +27,9 @@ export function LanguageToggle() {
       <button
         type="button"
         onClick={() => setAppLanguage('en')}
-        className={`rounded px-1.5 py-1 ${!isPt ? 'font-medium text-[var(--accent)]' : 'opacity-55 hover:opacity-100'}`}
+        className={`rounded px-1.5 py-1 transition-[opacity,color] duration-[var(--motion-fast)] ease-[var(--motion-ease)] ${
+          !isPt ? 'font-medium text-[var(--accent)]' : 'opacity-55 hover:opacity-100'
+        }`}
         aria-pressed={!isPt}
       >
         EN

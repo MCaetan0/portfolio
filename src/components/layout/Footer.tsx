@@ -14,13 +14,26 @@ export function Footer() {
             © {year} {profile.name}. {t('footer.rights')}
           </p>
           <div className="flex flex-wrap items-center gap-4 text-body-sm">
-            <a href={profile.github} target="_blank" rel="noreferrer" className="hover:underline">
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-opacity duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:underline"
+            >
               GitHub
             </a>
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:underline">
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-opacity duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:underline"
+            >
               LinkedIn
             </a>
-            <a href={`mailto:${profile.email}`} className="hover:underline">
+            <a
+              href={`mailto:${profile.email}`}
+              className="transition-opacity duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:underline"
+            >
               {profile.email}
             </a>
           </div>

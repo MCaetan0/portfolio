@@ -1,11 +1,15 @@
-import { useId, useMemo, useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { ChevronDown } from 'lucide-react'
+import { useId, useMemo, useState, type HTMLAttributes } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useFocus } from '../../contexts/FocusContext'
 import { experience } from '../../data/experience'
 import { profile } from '../../data/profile'
 import { useLocaleText } from '../../hooks/useLocaleText'
+import { fadeSlideVariants, motionStagger, transition } from '../../lib/motion'
 import { sortByFocus } from '../../lib/sortByFocus'
 import type { ExperienceItem } from '../../types'
+import { FadeIn } from '../ui/FadeIn'
 import { Section } from '../layout/Section'
 import { SectionHeader } from '../ui/SectionHeader'
 
@@ -26,27 +30,29 @@ export function Experience() {
 
   return (
     <Section id="experience">
-      <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <SectionHeader
-          eyebrow={t('experience.eyebrow')}
-          title={t('experience.title')}
-          className="mb-0"
-        />
-        <a
-          href={resume}
-          target="_blank"
-          rel="noreferrer"
-          className="shrink-0 font-mono text-caption uppercase tracking-[0.12em] text-[var(--text-secondary)] underline-offset-4 hover:text-[var(--accent)] hover:underline"
-        >
-          {t('experience.resumeLink')}
-        </a>
-      </div>
+      <FadeIn>
+        <div className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <SectionHeader
+            eyebrow={t('experience.eyebrow')}
+            title={t('experience.title')}
+            className="mb-0"
+          />
+          <a
+            href={resume}
+            target="_blank"
+            rel="noreferrer"
+            className="shrink-0 font-mono text-caption uppercase tracking-[0.12em] text-[var(--text-secondary)] underline-offset-4 transition-[color] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:text-[var(--accent)] hover:underline"
+          >
+            {t('experience.resumeLink')}
+          </a>
+        </div>
 
-      <ol className="space-y-0 border-t border-[var(--border-hairline)]">
-        {items.map((item) => (
-          <ExperienceRow key={item.id} item={item} lt={lt} />
-        ))}
-      </ol>
+        <ol className="space-y-0 border-t border-[var(--border-hairline)]">
+          {items.map((item) => (
+            <ExperienceRow key={item.id} item={item} lt={lt} />
+          ))}
+        </ol>
+      </FadeIn>
     </Section>
   )
 }
@@ -61,6 +67,7 @@ function ExperienceRow({
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const panelId = useId()
+  const reduced = useReducedMotion() ?? false
 
   return (
     <li className="border-b border-[var(--border-hairline)] py-6">
@@ -82,25 +89,48 @@ function ExperienceRow({
 
       <button
         type="button"
-        className="mt-3 font-mono text-caption uppercase tracking-[0.12em] text-[var(--accent)] underline-offset-4 hover:underline"
+        className="mt-3 inline-flex items-center gap-1.5 font-mono text-caption uppercase tracking-[0.12em] text-[var(--accent)] underline-offset-4 transition-[opacity] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:underline"
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((v) => !v)}
       >
         {open ? t('experience.hideDetails') : t('experience.showDetails')}
+        <ChevronDown
+          size={14}
+          aria-hidden
+          className={`transition-transform duration-[var(--motion-base)] ease-[var(--motion-ease)] ${
+            open ? 'rotate-180' : 'rotate-0'
+          }`}
+        />
       </button>
 
-      <ul
-        id={panelId}
-        hidden={!open}
-        className="mt-4 space-y-2 border-t border-[var(--border-hairline)] pt-4"
-      >
-        {item.bullets.map((bullet) => (
-          <li key={bullet.en} className="text-body-sm leading-[1.45] text-[var(--text-primary)]">
-            — {lt(bullet)}
-          </li>
-        ))}
-      </ul>
+      <div className="expand-grid" data-open={open ? 'true' : 'false'}>
+        <div className="expand-inner">
+          <div
+            id={panelId}
+            aria-hidden={!open}
+            {...(!open ? ({ inert: true } as HTMLAttributes<HTMLDivElement>) : {})}
+          >
+            <ul className="mt-4 space-y-2 border-t border-[var(--border-hairline)] pt-4">
+              {item.bullets.map((bullet, index) => (
+                <motion.li
+                  key={bullet.en}
+                  initial={false}
+                  animate={open ? 'visible' : 'hidden'}
+                  variants={fadeSlideVariants(reduced, 6)}
+                  transition={{
+                    ...transition('base', reduced),
+                    delay: open && !reduced ? index * motionStagger : 0,
+                  }}
+                  className="text-body-sm leading-[1.45] text-[var(--text-primary)]"
+                >
+                  — {lt(bullet)}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
     </li>
   )
 }

@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
-import { buttonVariants } from './buttonStyles'
+import { buttonClass } from './buttonStyles'
 
-type Variant = keyof typeof buttonVariants
+type Variant = 'filled' | 'ghost' | 'ghostOnDark'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: Variant
@@ -17,11 +17,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
-    <button
-      type={type}
-      className={`inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] px-6 py-3.5 font-sans text-body-sm font-semibold tracking-wide transition-opacity disabled:opacity-50 ${buttonVariants[variant]} ${className}`}
-      {...props}
-    >
+    <button type={type} className={buttonClass(variant, className)} {...props}>
       {children}
     </button>
   )

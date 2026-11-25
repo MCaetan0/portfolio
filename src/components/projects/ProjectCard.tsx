@@ -19,7 +19,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <Card
       variant={variant}
-      className="group flex h-full flex-col gap-4 transition-[border-color] duration-200"
+      className="group flex h-full flex-col gap-4 transition-[border-color,transform] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:-translate-y-0.5"
     >
       <div className="flex items-start justify-between gap-3">
         <p className="font-mono text-caption uppercase tracking-wider opacity-75">
@@ -42,14 +42,19 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           src={project.coverImage}
           alt={lt(project.title)}
           loading="lazy"
-          className="aspect-[16/10] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          className="aspect-[16/10] w-full object-cover transition-transform duration-[var(--motion-base)] ease-[var(--motion-ease)] group-hover:scale-[1.02]"
         />
       </Link>
 
       <div className="mt-auto space-y-3">
         <div>
           <h3 className="font-display text-heading-sm font-bold tracking-tight">
-            <Link to={`/projects/${project.slug}`}>{lt(project.title)}</Link>
+            <Link
+              to={`/projects/${project.slug}`}
+              className="transition-opacity duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:opacity-80"
+            >
+              {lt(project.title)}
+            </Link>
           </h3>
           <p className="mt-2 text-body-sm leading-[1.45] opacity-85">{lt(project.shortDescription)}</p>
         </div>

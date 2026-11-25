@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Footer } from './components/layout/Footer'
 import { Header } from './components/layout/Header'
+import { PageTransition } from './components/layout/PageTransition'
+import { LocaleFade } from './components/ui/LocaleFade'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { Home } from './pages/Home'
 
@@ -20,7 +22,6 @@ function MetaUpdater() {
   const location = useLocation()
 
   useEffect(() => {
-    // Always default (fullstack) meta for SEO / link previews
     document.title = t('meta.title')
     const desc = document.querySelector('meta[name="description"]')
     if (desc) desc.setAttribute('content', t('meta.description'))
@@ -40,15 +41,19 @@ function AppRoutes() {
       <MetaUpdater />
       <Header />
       <main>
-        <Suspense fallback={<div className="px-6 py-20">…</div>}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects/:slug" element={<ProjectDetail />} />
-            <Route path="/404" element={<NotFound />} />
-            {DevLinks ? <Route path="/dev/links" element={<DevLinks />} /> : null}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
+        <LocaleFade>
+          <Suspense fallback={<div className="px-6 py-20">…</div>}>
+            <PageTransition>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/projects/:slug" element={<ProjectDetail />} />
+                <Route path="/404" element={<NotFound />} />
+                {DevLinks ? <Route path="/dev/links" element={<DevLinks />} /> : null}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </PageTransition>
+          </Suspense>
+        </LocaleFade>
       </main>
       <Footer />
     </>

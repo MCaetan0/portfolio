@@ -37,6 +37,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(STORAGE_KEY, theme)
   }, [theme])
 
+  // Enable theme color transitions only after first paint (no flash on load)
+  useEffect(() => {
+    const id = window.requestAnimationFrame(() => {
+      document.documentElement.classList.add('theme-ready')
+    })
+    return () => window.cancelAnimationFrame(id)
+  }, [])
+
   const setTheme = useCallback((next: Theme) => setThemeState(next), [])
   const toggleTheme = useCallback(
     () => setThemeState((prev) => (prev === 'dark' ? 'light' : 'dark')),

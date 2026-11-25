@@ -9,6 +9,13 @@ export const buttonVariants: Record<Variant, string> = {
     'bg-transparent text-[var(--text-on-dark)] border border-[var(--text-on-dark)] hover:bg-white/10',
 }
 
+const motionClass =
+  'transition-[opacity,background-color,border-color,color,transform] duration-[var(--motion-fast)] ease-[var(--motion-ease)] hover:-translate-y-px'
+
 export function buttonLinkClass(variant: Variant = 'ghost') {
-  return `inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] px-6 py-3.5 font-sans text-body-sm font-semibold tracking-wide transition-opacity ${buttonVariants[variant]}`
+  return `inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] px-6 py-3.5 font-sans text-body-sm font-semibold tracking-wide ${motionClass} ${buttonVariants[variant]}`
+}
+
+export function buttonClass(variant: Variant = 'filled', className = '') {
+  return `inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] px-6 py-3.5 font-sans text-body-sm font-semibold tracking-wide disabled:opacity-50 ${motionClass} ${buttonVariants[variant]} ${className}`
 }
