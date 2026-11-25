@@ -1,5 +1,8 @@
 import type { SkillGroup } from '../types'
 
+/**
+ * Kept for focus-profile tag coverage. Not rendered as a home section.
+ */
 export const skills: SkillGroup[] = [
   {
     id: 'languages',
@@ -28,12 +31,17 @@ export const skills: SkillGroup[] = [
     category: { pt: 'Backend', en: 'Backend' },
     items: [
       { label: 'APIs RESTful', tags: ['api', 'backend'] },
+      { label: 'ASP.NET Core (Web API e Minimal APIs)', tags: ['dotnet', 'csharp', 'api', 'backend'] },
+      { label: 'Entity Framework Core', tags: ['dotnet', 'csharp', 'sql', 'backend'] },
       { label: 'Node.js', tags: ['nodejs', 'backend', 'api'] },
       { label: 'Nest.js', tags: ['nestjs', 'nodejs', 'backend', 'api'] },
-      { label: 'MVC', tags: ['backend'] },
       { label: 'Microsserviços', tags: ['microservices', 'backend', 'messaging'] },
       { label: 'Mensageria', tags: ['messaging', 'backend', 'microservices'] },
+      { label: 'RabbitMQ', tags: ['messaging', 'microservices', 'backend'] },
+      { label: 'Swagger / OpenAPI', tags: ['api', 'backend', 'dotnet'] },
       { label: 'Sistemas distribuídos', tags: ['microservices', 'backend'] },
+      { label: 'SOLID', tags: ['backend', 'dotnet'] },
+      { label: 'Testes automatizados', tags: ['cicd', 'backend', 'dotnet'] },
     ],
   },
   {
@@ -54,10 +62,9 @@ export const skills: SkillGroup[] = [
       { label: 'GCP', tags: ['gcp', 'backend'] },
       { label: 'Docker', tags: ['docker', 'backend', 'cicd'] },
       { label: 'Nginx', tags: ['backend'] },
-      { label: 'Git', tags: ['cicd'] },
       { label: 'GitHub Actions', tags: ['cicd'] },
       { label: 'GitLab CI/CD', tags: ['cicd'] },
-      { label: 'Agile', tags: [] },
+      { label: 'Pandas', tags: ['python', 'data', 'automation'] },
     ],
   },
 ]
