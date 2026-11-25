@@ -2,12 +2,14 @@ import { Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { profile } from '../../data/profile'
+import { useLocaleText } from '../../hooks/useLocaleText'
 import { Section } from '../layout/Section'
 import { Button } from '../ui/Button'
 import { SectionHeader } from '../ui/SectionHeader'
 
 export function Contact() {
   const { t } = useTranslation()
+  const lt = useLocaleText()
   const [copied, setCopied] = useState(false)
 
   const copyEmail = async () => {
@@ -54,6 +56,27 @@ export function Contact() {
           >
             {t('contact.linkedin')}
           </a>
+        </div>
+      </div>
+
+      <div className="mt-12 grid gap-6 border-t border-[var(--border-hairline)] pt-6 text-body-sm text-[var(--text-secondary)] sm:grid-cols-2">
+        <div>
+          <p className="mb-2 font-mono text-caption uppercase tracking-[0.14em]">
+            {t('contact.education')}
+          </p>
+          <ul className="space-y-1">
+            {profile.education.map((item) => (
+              <li key={item.institution}>
+                {lt(item.degree)} — {item.institution}, {item.period.split('–').pop()?.trim()}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="mb-2 font-mono text-caption uppercase tracking-[0.14em]">
+            {t('contact.languages')}
+          </p>
+          <p>{profile.languages.map((lang) => lt(lang)).join(' · ')}</p>
         </div>
       </div>
     </Section>
