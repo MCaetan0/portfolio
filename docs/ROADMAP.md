@@ -9,7 +9,11 @@ Cada tarefa tem um checkbox e um critério de pronto. Marque conforme avançar.
 
 | Decisão | Escolha | Motivo |
 |---------|---------|--------|
-| Visual | Sistema próprio inspirado em princípios de `docs/DESIGN.md` (papel quente, flat, tipografia forte, ritmo cromático) — **sem clonar Glyphy** | Dono pediu redesign baseado no DESIGN, não cópia |
+| Visual | Sistema próprio (papel quente, flat, tipografia forte, ritmo cromático) — sem clonar referência externa | Identidade do portfólio |
+| Home | Hero → Projetos → Como eu trabalho → Experiência → Contato | Sai do formato currículo; projetos primeiro |
+| Skills na home | Removida; stack principal no Hero | Evita lista de keywords; mantém `skills.ts` para tags de foco |
+| Experiência | Highlight + “ver detalhes”; lista vertical | Menos texto inicial; bullets sob demanda |
+| Docs privados | `.private/` no gitignore (brief/design/links de foco) | Não expor material interno no repo público |
 | Dark mode | Inversão do sistema próprio (night canvas, paper text; heat accent) | Brief exige dark |
 | Eyebrows | Labels mono numerados em PT/EN (`01 — Sobre`) | Interpretação do padrão eyebrow, sem japonês/pixel |
 | Fontes | Syne (display) / Source Sans 3 (UI) / IBM Plex Mono (meta) | Grotesca expressiva + body legível |

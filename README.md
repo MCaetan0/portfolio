@@ -1,6 +1,6 @@
 # Marcelo Caetano de Lima — Portfolio
 
-Professional portfolio built with **React + TypeScript + Vite** and **Tailwind CSS**. Visual system is original (warm paper, flat, heat accent), inspired by principles in `docs/DESIGN.md` — not a clone of that reference site.
+Backend software engineer portfolio (.NET & Python). Built with **React + TypeScript + Vite** and **Tailwind CSS**.
 
 PT | EN · light/dark · static site (no backend)
 
@@ -20,11 +20,12 @@ npm run build
 npm run preview
 ```
 
-Lint / format:
+Lint / format / test:
 
 ```bash
 npm run lint
 npm run format
+npm test
 ```
 
 ---
@@ -61,7 +62,7 @@ Example:
   },
   featured: true,
   year: 2026,
-  tags: ['react', 'typescript', 'frontend', 'ui'], // see FocusTag in src/types/focus.ts
+  tags: ['react', 'typescript', 'frontend', 'ui'],
 }
 ```
 
@@ -69,28 +70,16 @@ No component changes needed — the home grid and `/projects/:slug` read from th
 
 ---
 
-## Edit texts & translations / Textos e traduções
+## Edit texts / Editar textos
 
 | What | Where |
 |------|--------|
-| UI strings (nav, buttons, section titles) | `src/locales/pt.json`, `src/locales/en.json` |
+| UI strings | `src/locales/pt.json`, `src/locales/en.json` |
 | Profile, links, resume paths | `src/data/profile.ts` |
 | Experience | `src/data/experience.ts` |
-| Skills | `src/data/skills.ts` |
 | Projects | `src/data/projects.ts` |
 
-GitHub / LinkedIn placeholders live in `profile.ts` — replace `SEU_USUARIO`.
-
----
-
-## Resume PDFs / Currículos
-
-Replace the placeholders:
-
-- `public/resume-pt.pdf`
-- `public/resume-en.pdf`
-
-Paths are configured in `src/data/profile.ts` (`resumePt` / `resumeEn`). The hero CTA picks the file for the active language.
+Resume PDFs: replace `public/resume-pt.pdf` and `public/resume-en.pdf` (open in a new tab by language).
 
 ---
 
@@ -99,64 +88,6 @@ Paths are configured in `src/data/profile.ts` (`resumePt` / `resumeEn`). The her
 1. Push this repo to GitHub.
 2. Import the project in [Vercel](https://vercel.com).
 3. Framework preset: Vite. Build: `npm run build`. Output: `dist`.
-4. `vercel.json` already rewrites SPA routes to `index.html`.
+4. `vercel.json` already rewrites SPA routes to `index.html` and short `/go/*` redirects.
 
-CI (lint + build) runs on every push/PR to `main` via [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
-
-Custom domain: add it in the Vercel project settings and point DNS as instructed.
-
----
-
-## Links por vaga / Job-focus links
-
-The portfolio can silently adapt to a job posting. Visitors never see a selector or `?foco=` — only a neutral `?ref=` that is stripped from the URL after load. Focus lives in `sessionStorage` for the tab session.
-
-### Generate a link for a job
-
-1. Pick a profile: `dotnet` | `react` | `python` | `backend` (or default `fullstack` = no code).
-2. Use the matching short or ref link (after deploy, replace the origin):
-
-| Profile | Short link | Ref link |
-|---------|------------|----------|
-| dotnet | `/go/x1` | `/?ref=k7` |
-| react | `/go/r2` | `/?ref=a3` |
-| python | `/go/p1` | `/?ref=p2` |
-| backend | `/go/b1` | `/?ref=b9` |
-| fullstack | `/` | — |
-
-3. In local development, open **http://localhost:5173/dev/links** for copy buttons (this route is **not** in the production build).
-
-### Create a new focus profile
-
-1. Add the id to `FOCUS_PROFILES` in [`src/types/focus.ts`](src/types/focus.ts).
-2. Add priority tags + skill group order in [`src/config/focusProfiles.ts`](src/config/focusProfiles.ts).
-3. Add `focus.<id>.headline` and `focus.<id>.summary` in [`src/locales/pt.json`](src/locales/pt.json) and [`en.json`](src/locales/en.json).
-4. Map a neutral code in [`src/config/focusCodes.ts`](src/config/focusCodes.ts) and a short slug in `FOCUS_SHORT_LINKS`.
-5. Add a Vercel redirect in [`vercel.json`](vercel.json): `"/go/yy" → "/?ref=zz"`.
-
-### Add tags to a new project
-
-Include a `tags` array using only values from `FocusTag` (`src/types/focus.ts`), e.g. `['dotnet', 'api', 'sql']`. Same idea for experience bullets and skill items.
-
-### Tests
-
-```bash
-npm test
-```
-
----
-
-## What you still need to fill / Pendências
-
-- [x] Real GitHub URL (`src/data/profile.ts`)
-- [x] Real LinkedIn URL
-- [ ] Real resume PDFs (PT + EN)
-- [ ] Real project images / screenshots
-- [ ] Replace the 2 sample projects (keep or refine Expiral)
-- [ ] Optional: custom domain, photo/avatar
-
----
-
-## Design reference
-
-See [`docs/DESIGN.md`](docs/DESIGN.md) and [`docs/ROADMAP.md`](docs/ROADMAP.md).
+CI (lint + test + build) runs on every push/PR to `main`.
